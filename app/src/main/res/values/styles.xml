@@ -7,5 +7,13 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="pop_style1">
+        <item name="android:windowEnterAnimation">@anim/pop_show</item>
+        <item name="android:windowExitAnimation">@anim/pop_dismiss</item>
+    </style>
 
+    <style name="pop_style2">
+        <item name="android:windowEnterAnimation">@anim/pop_show2</item>
+        <item name="android:windowExitAnimation">@anim/pop_dismiss2</item>
+    </style>
 </resources>
