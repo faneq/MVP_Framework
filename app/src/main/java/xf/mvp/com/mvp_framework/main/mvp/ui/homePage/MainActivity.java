@@ -1,8 +1,12 @@
 package xf.mvp.com.mvp_framework.main.mvp.ui.homePage;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.request.RequestOptions;
 import com.orhanobut.logger.Logger;
+import com.sunfusheng.glideimageview.GlideImageLoader;
+import com.sunfusheng.glideimageview.GlideImageView;
 
 import butterknife.BindView;
 import xf.mvp.com.mvp_framework.R;
@@ -15,6 +19,8 @@ import xf.mvp.com.mvp_framework.main.mvp.ui.base.BaseActivity;
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
     @BindView(R.id.tvContent)
     TextView tvContent;
+    @BindView(R.id.ivTest)
+    ImageView ivTest;
 
     @Override
     protected int getLayoutId() {
@@ -31,6 +37,13 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     protected void initEventAndData() {
         tvContent.setText("1111");
         mPresenter.getData();
+        RequestOptions requestOptions = new RequestOptions();
+        //        requestOptions.
+        GlideImageView imageView = new GlideImageView(this);
+        //        imageView.getImageLoader().
+        GlideImageLoader.create(ivTest).
+                loadImage("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3497049841,2955309607&fm=27&gp=0.jpg",
+                        R.drawable.shadow_bottom);
     }
 
 
